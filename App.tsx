@@ -1,12 +1,6 @@
 import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
-import { StatusBar } from 'react-native';
 import RouteIndex from "./src/routes/index"
 
 export default function App() {
-  return (
-    <NavigationContainer>
-        <RouteIndex/>
-    </NavigationContainer>
-  )
+  return <RouteIndex/>
 }

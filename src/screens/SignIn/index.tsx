@@ -4,7 +4,7 @@ import React from 'react'
 export default function SignIn() {
   return (
     <View>
-      <Text>Legal</Text>
+      <Text>tela de login</Text>
     </View>
   )
 }
