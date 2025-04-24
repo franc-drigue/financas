@@ -3,6 +3,7 @@ import React from 'react'
 import AuthRoutes from './auth.routes';
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'react-native';
+import { SafeAreaView } from 'react-native';
 
 
 export default function RouteIndex() {
@@ -11,9 +12,11 @@ export default function RouteIndex() {
   const signIn = false
 
   return (
-    <NavigationContainer>
-        <StatusBar/>
+    <SafeAreaView style={{flex: 1}}>
+      <StatusBar/>
+      <NavigationContainer>
         {signIn ? <View></View> : <AuthRoutes/>}
-    </NavigationContainer>
+      </NavigationContainer>
+    </SafeAreaView>
   )
 }

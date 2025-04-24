@@ -4,7 +4,7 @@ import React from 'react'
 export default function SignUp() {
   return (
     <View>
-      <Text>index</Text>
+      <Text>Tela de registro</Text>
     </View>
   )
 }
