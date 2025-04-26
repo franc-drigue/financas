@@ -8,13 +8,18 @@ import {
   Platform
 } from 'react-native';
 import React from 'react';
-import {styles} from "./styles"
+import {styles} from "./styles";
+import { useNavigation } from '@react-navigation/native';
 
 
 export default function SignIn() {
+
+  const navegation = useNavigation<any>()
+
   return (
     <View style={styles.background}>
       <KeyboardAvoidingView
+       enabled
        behavior={Platform.OS == "ios" ? "padding" : 'height'}
       >
         <Image 
@@ -38,7 +43,7 @@ export default function SignIn() {
             Entrar
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navegation.navigate("SignUp")}>
           <Text style={styles.singUp}>
             Cadastre-se
           </Text>

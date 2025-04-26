@@ -11,18 +11,28 @@ export default function AuthRoutes() {
   return (
     <>
    <StatusBar backgroundColor={'#f0f0f0'} barStyle={"dark-content"}/>
-   <Stack.Navigator
-    screenOptions={{
-      headerShown: false
-    }}
-    >
+   <Stack.Navigator screenOptions={{
+    headerTitleStyle: {
+      color: '#fff'
+    },
+   }}>
         <Stack.Screen
           name="SignIn" 
           component={SignIn}
+          options={{
+            headerShown: false
+          }}
         />
          <Stack.Screen
           name="SignUp" 
           component={SignUp}
+          options={{
+            title: "Voltar",
+            headerStyle: {
+              backgroundColor: "#1ED884",
+            },
+            headerTintColor: "#fff",
+          }}
         />
     </Stack.Navigator>
     </>
