@@ -6,9 +6,9 @@ import {
   TouchableOpacity,
   TextInput,
   Platform
-} from 'react-native'
-import { styles } from './styles'
-import React from 'react'
+} from 'react-native';
+import { styles } from './styles';
+import React from 'react';
 
 export default function SignUp() {
   return (
@@ -32,7 +32,7 @@ export default function SignUp() {
               placeholder='Senha'
             />
          </View>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} activeOpacity={0.7}>
             <Text style={styles.textButton}>
               Cadastrar
             </Text>

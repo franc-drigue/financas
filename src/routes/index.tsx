@@ -1,5 +1,5 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View } from 'react-native';
+import React from 'react';
 import AuthRoutes from './auth.routes';
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'react-native';

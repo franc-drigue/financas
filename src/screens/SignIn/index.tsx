@@ -38,7 +38,7 @@ export default function SignIn() {
           />
         </View>
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} activeOpacity={0.7}>
           <Text style={styles.textButton}>
             Entrar
           </Text>

@@ -9,9 +9,9 @@ export const styles = StyleSheet.create({
  },
 
 image: {
-   alignSelf: "center",
-   marginBottom: 25,
-   height: 150
+    alignSelf: "center",
+    marginBottom: 25,
+    height: 150
 },
 
 input: {
@@ -20,7 +20,7 @@ input: {
     borderRadius: 5,
     paddingHorizontal: 15,
     elevation: 1
- },
+},
 
 containerInputs: {
     gap: 15
@@ -36,9 +36,9 @@ button: {
 },
 
 textButton: {
-   color: '#fff',
-   fontSize: 18,
-   fontWeight: "800"
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: "800"
 },
 
 singUp: {
