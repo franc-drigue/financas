@@ -20,7 +20,10 @@ export default function SignUp() {
   const { handleRegisterUser } = useContext(AuthContext);
 
  function handleSignUp () {
-   handleRegisterUser(name, email, password)
+   handleRegisterUser(name, email, password);
+   setEmail("");
+   setName("");
+   setPassword("");
  }
 
   return (
@@ -50,7 +53,7 @@ export default function SignUp() {
               placeholder='Senha'
             />
          </View>
-        <TouchableOpacity style={styles.button} activeOpacity={0.7}>
+        <TouchableOpacity style={styles.button} activeOpacity={0.7} onPress={handleSignUp}>
             <Text style={styles.textButton}>
               Cadastrar
             </Text>
