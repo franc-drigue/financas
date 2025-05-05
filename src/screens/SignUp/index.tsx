@@ -20,6 +20,11 @@ export default function SignUp() {
   const { handleRegisterUser } = useContext(AuthContext);
 
  function handleSignUp () {
+  
+  if(name === "" || email === "" || password === "") {
+    return
+  }
+
    handleRegisterUser(name, email, password);
    setEmail("");
    setName("");
