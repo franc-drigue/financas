@@ -14,9 +14,9 @@ export default function RouteIndex() {
 
   return (
     <SafeAreaView style={{flex: 1}}>
-        <NavigationContainer>
+        <NavigationContainer >
           <AuthProvider>
-          {signIn ? <AppRoutes/> : <AuthRoutes/>}
+           {true ? <AppRoutes/> : <AuthRoutes/>}
           </AuthProvider>
         </NavigationContainer>
     </SafeAreaView>

@@ -12,7 +12,7 @@ type Auth = {
 export const AuthContext = createContext({} as Auth);
 
 export default function AuthProvider({children}: {children: React.ReactNode}){
-
+      const [user, setUser] = useState(null);
       const navigation = useNavigation<any>()
 
       const handleRegisterUser =  async (name: string, email: string, password: string) => {
