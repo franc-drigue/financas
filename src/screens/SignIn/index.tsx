@@ -7,12 +7,10 @@ import {
   TouchableOpacity,
   Platform
 } from 'react-native';
-import React,{useState} from 'react';
+import React,{useState, useContext} from 'react';
 import {styles} from "./styles";
 import { useNavigation } from '@react-navigation/native';
-import { fetchClient } from '../../../utils/httpClient';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { KEYS } from "../../../consts/keys";
+import { AuthContext } from '../../../contexts/auth';
 
 
 export default function SignIn() {
@@ -20,22 +18,13 @@ export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  async function handleSignIn() {
-    try {
-      const data = await fetchClient.post("/login", {
-        email,
-        password
-     })
+  const {handleSignIn} = useContext(AuthContext)
 
-     if(data.token) {
-        await AsyncStorage.setItem(KEYS.AUTH_TOKEN, data.token);
-     }
+ function handleLogin() {
+  if(email === "" || password === "") return;
+  handleSignIn(email, password);
+ }
 
-     navegation.navigate();
-    }catch(error) {
-      console.log(error)
-    }
-  }
 
   return (
     <View style={styles.background}>
@@ -63,7 +52,7 @@ export default function SignIn() {
           />
         </View>
 
-        <TouchableOpacity style={styles.button} activeOpacity={0.7} onPress={handleSignIn}>
+        <TouchableOpacity style={styles.button} activeOpacity={0.7} onPress={handleLogin}>
           <Text style={styles.textButton}>
             Entrar
           </Text>
