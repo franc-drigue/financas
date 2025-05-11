@@ -20,7 +20,7 @@ export type RootStackParamList = {
 type Auth = {
  handleRegisterUser: (name: string, email: string, password: string) => void;
  handleSignIn: (email: string, password: string) => void;
- signed: boolean
+ signed: boolean;
 }
 
 export const AuthContext = createContext({} as Auth);
