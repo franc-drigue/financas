@@ -13,6 +13,21 @@ export const styles = StyleSheet.create({
         flex: 5,
         borderTopRightRadius: 8,
         borderTopLeftRadius: 8,
-        backgroundColor: "#fff"
+        backgroundColor: "#fff",
+        paddingVertical: 10,
+        paddingHorizontal: 10
+    },
+
+    containerOldsMoviments: {
+       flexDirection: "row",
+       alignItems: "center",
+       gap: 4,
+       paddingHorizontal: 5,
+       marginBottom: 10
+    },
+
+    oldsMoviments: {
+        fontSize: 17,
+        fontWeight: "bold"
     }
 })

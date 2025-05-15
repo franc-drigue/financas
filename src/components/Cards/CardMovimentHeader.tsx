@@ -11,7 +11,7 @@ type CardProps = {
   backgroundColor: string;
 }
 
-export default function Cards() {
+export default function CardMovimentHeader() {
   return (
     <View style={[{backgroundColor: "#228B22"}, styles.card]}>
       <Text style={styles.title}>cards</Text>
