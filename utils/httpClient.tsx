@@ -1,4 +1,4 @@
-const BASE_URL = 'http://172.20.10.2:3333';
+const BASE_URL = 'http://192.168.0.3:3333';
 
 function getHeaders(authToken?: string): HeadersInit_ {
   return {

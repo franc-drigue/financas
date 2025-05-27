@@ -49,7 +49,7 @@ export default function AppRoutes() {
         component={MyPerfil}
         options={{
           drawerLabel: "Meu perfil",
-          drawerIcon: ({size, color}) => <Icon name='person' iconStyle={"solid"} size={size} color={color}/>,
+          drawerIcon: ({size, color}) => <Icon name='user-large' iconStyle={"solid"} size={size} color={color}/>,
           headerTitleStyle: {
             fontWeight: "light",
             fontSize: 16
